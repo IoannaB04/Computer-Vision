@@ -23,7 +23,14 @@ Note that for merging the images, in order to achieve a result close to that of 
 
 # 3rd Project - Classification with Bag Of Words model and K-NN and SVM classifiers:
 
-Code was developed to create the Bag Of Words model and the K-NN and SVM classifiers, as well as code that determines whether the result is correct or not. The results are saved in a separate .txt file. 
+The program is implemented by performing the following steps:
+1) Visual vocabulary production based on the Bag of Visual Words model (BOVW). The creation of the dictionary should be done using the K-Means algorithm using all images in the training set (imagedb_train).
+2) Extract a descriptor on each training image (imagedb_train) based on BOVW model using the dictionary generated in previous step.
+3) Based on these results, implement the classification function of an image using two classifiers:
+         k-NN algorithm (without using the associated OpenCV function) 
+         one-versus-all method where for each class an SVM classifier is trained.
+5) System evaluation: Using the test set (imagedb_test) measure the accuracy of the system (in both cases of classifiers) expressed as the percentage of successful classifications, overall and by class. The results are saved in a separate .txt file. 
+
 There is also an Excel file that presents the results in charts.
 
 
